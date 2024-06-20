@@ -14,6 +14,7 @@
 		3B94E30F2C23E35E001FB9B9 /* ClickaDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B94E30E2C23E35E001FB9B9 /* ClickaDoTests.swift */; };
 		3B94E3192C23E35E001FB9B9 /* ClickaDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B94E3182C23E35E001FB9B9 /* ClickaDoUITests.swift */; };
 		3B94E31B2C23E35E001FB9B9 /* ClickaDoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B94E31A2C23E35E001FB9B9 /* ClickaDoUITestsLaunchTests.swift */; };
+		3B9C008A2C24B75200A89463 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C00892C24B74800A89463 /* AddTaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		3B94E3142C23E35E001FB9B9 /* ClickaDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClickaDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B94E3182C23E35E001FB9B9 /* ClickaDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickaDoUITests.swift; sourceTree = "<group>"; };
 		3B94E31A2C23E35E001FB9B9 /* ClickaDoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickaDoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3B9C00892C24B74800A89463 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		3B94E2FB2C23E35D001FB9B9 /* ClickaDo */ = {
 			isa = PBXGroup;
 			children = (
+				3B9C00892C24B74800A89463 /* AddTaskView.swift */,
 				3B94E2FC2C23E35D001FB9B9 /* ClickaDoApp.swift */,
 				3B94E2FE2C23E35D001FB9B9 /* ContentView.swift */,
 				3B94E3002C23E35E001FB9B9 /* Assets.xcassets */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B9C008A2C24B75200A89463 /* AddTaskView.swift in Sources */,
 				3B94E2FF2C23E35D001FB9B9 /* ContentView.swift in Sources */,
 				3B94E2FD2C23E35D001FB9B9 /* ClickaDoApp.swift in Sources */,
 			);
