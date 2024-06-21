@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var tasks = [
+    @State private var tasks: [Task] = UserDefaults.standard.loadTasks() ?? [
         Task(title: "Buy groceries", isCompleted: false),
-        Task(title: "Walk the dog", isCompleted: false),
+        Task(title: "Take a nap", isCompleted: false),
         Task(title: "Finish project", isCompleted: true)
     ]
     @State private var showingAddTaskView = false
@@ -24,6 +24,7 @@ struct ContentView: View {
                             .onTapGesture {
                                 if let index = tasks.firstIndex(where: { $0.id == task.id }) {
                                     tasks[index].isCompleted.toggle()
+                                    UserDefaults.standard.saveTasks(tasks)
                                 }
                             }
                         Text(task.title)
@@ -40,9 +41,27 @@ struct ContentView: View {
                 AddTaskView { newTaskTitle in
                     let newTask = Task(title: newTaskTitle, isCompleted: false)
                     tasks.append(newTask)
+                    UserDefaults.standard.saveTasks(tasks)
                 }
             }
         }
+    }
+}
+
+extension UserDefaults {
+    private static let tasksKey = "tasksKey"
+    
+    func saveTasks(_ tasks: [Task]) {
+        let data = try? JSONEncoder().encode(tasks)
+        set(data, forKey: UserDefaults.tasksKey)
+    }
+    
+    func loadTasks() -> [Task]? {
+        guard let data = data(forKey: UserDefaults.tasksKey),
+              let tasks = try? JSONDecoder().decode([Task].self, from: data) else {
+            return nil
+        }
+        return tasks
     }
 }
 
